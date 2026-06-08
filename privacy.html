@@ -57,7 +57,7 @@
      (© OpenStreetMap-bidragsgivare).</p>
 
   <h2>Kontakt</h2>
-  <p>Frågor om integritet? Mejla <a href="mailto:saman@rahbari.se">saman@rahbari.se</a>.</p>
+  <p>Frågor om integritet? Mejla <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
 
   <hr>
 
@@ -94,6 +94,10 @@
      OpenStreetMap (© OpenStreetMap contributors).</p>
 
   <h2>Contact</h2>
-  <p>Privacy questions? Email <a href="mailto:saman@rahbari.se">saman@rahbari.se</a>.</p>
+  <p>Privacy questions? Email <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+  <script>
+    (function(){var u='spelbart',d='rahbari.se',m=u+'@'+d;
+     document.querySelectorAll('a.email').forEach(function(a){a.href='mailto:'+m;a.textContent=m;});})();
+  </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 
   <h2>Kontakt</h2>
   <p>Har du frågor, idéer eller hittat en bugg? Mejla
-     <a href="mailto:saman@rahbari.se">saman@rahbari.se</a> så svarar vi så snart vi kan.</p>
+     <a class="email" href="#">spelbart [at] rahbari [dot] se</a> så svarar vi så snart vi kan.</p>
 
   <h2>Vanliga frågor</h2>
 
@@ -57,5 +57,9 @@
   <h2>Integritet</h2>
   <p>Se vår <a href="privacy.html">integritetspolicy</a>. Kort sagt: vi samlar inte in någon
      data och spårar dig inte.</p>
+  <script>
+    (function(){var u='spelbart',d='rahbari.se',m=u+'@'+d;
+     document.querySelectorAll('a.email').forEach(function(a){a.href='mailto:'+m;a.textContent=m;});})();
+  </script>
 </body>
 </html>
