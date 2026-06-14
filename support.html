@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,53 +13,185 @@
   h1 { font-size: 1.8rem; } h2 { margin-top: 1.6em; }
   .q { font-weight: 600; margin-top: 1.2em; }
   a { color: #2f9e60; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 1.5rem; }
+  nav.langs button { font: inherit; cursor: pointer; border: 1px solid #8884; background: transparent;
+    color: inherit; padding: 4px 12px; border-radius: 999px; }
+  nav.langs button.active { background: #2f9e60; color: #fff; border-color: #2f9e60; }
+  .lang { display: none; } .lang.active { display: block; }
 </style>
 </head>
 <body>
   <p><a href="index.html">← Spelbart</a></p>
-  <h1>Spelbart – Support</h1>
-  <p>Spelbart hjälper dig bedöma golfvädret för dina ronder med ett "Spelbart-betyg" som
-     väger in nederbörd, vind, vindbyar, temperatur, luftfuktighet, UV och dagsljus.</p>
+  <nav class="langs" aria-label="Language">
+    <button data-l="sv">Svenska</button><button data-l="en">English</button>
+    <button data-l="nb">Norsk</button><button data-l="da">Dansk</button><button data-l="fi">Suomi</button>
+  </nav>
 
-  <h2>Kontakt</h2>
-  <p>Har du frågor, idéer eller hittat en bugg? Mejla
-     <a class="email" href="#">spelbart [at] rahbari [dot] se</a> så svarar vi så snart vi kan.</p>
+  <section class="lang" data-lang="sv">
+    <h1>Spelbart – Support</h1>
+    <p>Spelbart bedömer golfvädret för dina ronder med ett "Spelbart-betyg" (0–100) som väger in
+       nederbörd, vind, vindbyar, temperatur, luftfuktighet, UV och dagsljus – i Sverige, Norge,
+       Danmark och Finland.</p>
+    <h2>Kontakt</h2>
+    <p>Frågor, idéer eller en bugg? Mejla <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+    <h2>Vanliga frågor</h2>
+    <p class="q">Hur räknas betyget ut?</p>
+    <p>Varje timme börjar på 100 och väderfaktorer drar ner. En hel rond är snittet av timmarna från
+       din starttid, och en rond som hinner in i mörkret sänks kraftigt. Tryck på betyget för att se
+       uträkningen.</p>
+    <p class="q">Varför saknas betyg vissa timmar?</p>
+    <p>Efter solnedgången visas en månsymbol i stället – det går inte att spela i mörker.</p>
+    <p class="q">Kan jag byta väderkälla?</p>
+    <p>Ja. Appen använder landets egen källa (SMHI i Sverige, DMI i Danmark, FMI i Finland, yr.no i
+       Norge) och Apple Weather. I Inställningar väljer du källa, och "Jämför källor" låter dig växla
+       direkt i vyerna.</p>
+    <p class="q">Kan jag byta språk?</p>
+    <p>Ja, under Inställningar → Språk (svenska, engelska, norska, danska, finska). Starta om appen
+       efter bytet.</p>
+    <p class="q">Kan jag få påminnelser?</p>
+    <p>Spara en starttid under "Dina tider" så påminner appen på morgonen, före start och om vädret
+       försämras. Påminnelserna skapas lokalt. Du kan även lägga en widget på hemskärmen.</p>
+    <p class="q">Finns en nederbördsradar?</p>
+    <p>Ja, för Sverige och gränstrakterna (knappen visas där täckning finns).</p>
+    <h2>Integritet</h2>
+    <p>Se vår <a href="privacy.html">integritetspolicy</a>. Kort sagt: vi samlar inte in någon data.</p>
+  </section>
 
-  <h2>Vanliga frågor</h2>
+  <section class="lang" data-lang="en">
+    <h1>Spelbart – Support</h1>
+    <p>Spelbart rates golf weather for your rounds with a "Spelbart score" (0–100) weighing
+       precipitation, wind, gusts, temperature, humidity, UV and daylight – in Sweden, Norway,
+       Denmark and Finland.</p>
+    <h2>Contact</h2>
+    <p>Questions, ideas or a bug? Email <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+    <h2>FAQ</h2>
+    <p class="q">How is the score calculated?</p>
+    <p>Each hour starts at 100 and weather factors pull it down. A full round is the average of the
+       hours from your tee time, and a round that runs into darkness is lowered sharply. Tap the
+       score to see the breakdown.</p>
+    <p class="q">Why is there no score for some hours?</p>
+    <p>After sunset a moon icon is shown instead – you can't play in the dark.</p>
+    <p class="q">Can I change the weather source?</p>
+    <p>Yes. The app uses each country's own source (SMHI in Sweden, DMI in Denmark, FMI in Finland,
+       yr.no in Norway) plus Apple Weather. Choose a source in Settings, and "Compare sources" lets
+       you switch right in the views.</p>
+    <p class="q">Can I change the language?</p>
+    <p>Yes, under Settings → Language (Swedish, English, Norwegian, Danish, Finnish). Restart the app
+       after switching.</p>
+    <p class="q">Can I get reminders?</p>
+    <p>Save a tee time under "Your times" and the app reminds you in the morning, before the round and
+       if the weather worsens. Reminders are created locally. You can also add a home-screen widget.</p>
+    <p class="q">Is there a precipitation radar?</p>
+    <p>Yes, for Sweden and border areas (the button appears where there is coverage).</p>
+    <h2>Privacy</h2>
+    <p>See our <a href="privacy.html">privacy policy</a>. In short: we collect no data.</p>
+  </section>
 
-  <p class="q">Hur räknas Spelbart-betyget ut?</p>
-  <p>Varje timme börjar på 100 och olika väderfaktorer drar ner. Nederbörd, vind och vindbyar
-     väger tyngst, temperatur en del, luftfuktighet bara i samspel med temperaturen, och UV minst.
-     En hel rond är snittet av timmarna från din starttid – och en rond som hinner in i mörkret
-     sänks kraftigt eftersom golf kräver dagsljus. Tryck på det stora betyget för att se exakt
-     hur det räknats fram.</p>
+  <section class="lang" data-lang="nb">
+    <h1>Spelbart – Brukerstøtte</h1>
+    <p>Spelbart vurderer golfværet for rundene dine med en "Spelbart-score" (0–100) som vekter
+       nedbør, vind, vindkast, temperatur, luftfuktighet, UV og dagslys – i Sverige, Norge, Danmark
+       og Finland.</p>
+    <h2>Kontakt</h2>
+    <p>Spørsmål, idéer eller en feil? Send e-post til <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+    <h2>Vanlige spørsmål</h2>
+    <p class="q">Hvordan beregnes scoren?</p>
+    <p>Hver time starter på 100, og værfaktorer trekker ned. En hel runde er snittet av timene fra
+       starttiden din, og en runde som går inn i mørket trekkes kraftig ned. Trykk på scoren for å se
+       beregningen.</p>
+    <p class="q">Hvorfor mangler score enkelte timer?</p>
+    <p>Etter solnedgang vises et månesymbol i stedet – man kan ikke spille i mørket.</p>
+    <p class="q">Kan jeg bytte værkilde?</p>
+    <p>Ja. Appen bruker landets egen kilde (SMHI i Sverige, DMI i Danmark, FMI i Finland, yr.no i
+       Norge) og Apple Weather. Velg kilde i Innstillinger, og "Sammenlign kilder" lar deg bytte rett
+       i visningene.</p>
+    <p class="q">Kan jeg bytte språk?</p>
+    <p>Ja, under Innstillinger → Språk (svensk, engelsk, norsk, dansk, finsk). Start appen på nytt
+       etter bytte.</p>
+    <p class="q">Kan jeg få påminnelser?</p>
+    <p>Lagre en starttid under "Dine tider", så minner appen deg på om morgenen, før start og hvis
+       været forverres. Påminnelsene lages lokalt. Du kan også legge en widget på hjemskjermen.</p>
+    <p class="q">Finnes det en nedbørradar?</p>
+    <p>Ja, for Sverige og grenseområdene (knappen vises der det er dekning).</p>
+    <h2>Personvern</h2>
+    <p>Se <a href="privacy.html">personvernerklæringen</a>. Kort sagt: vi samler ikke inn data.</p>
+  </section>
 
-  <p class="q">Varför syns inget betyg på vissa timmar?</p>
-  <p>Efter solnedgången visas en månsymbol i stället för ett betyg, eftersom det inte går att
-     spela i mörker.</p>
+  <section class="lang" data-lang="da">
+    <h1>Spelbart – Support</h1>
+    <p>Spelbart vurderer golfvejret for dine runder med en "Spelbart-score" (0–100), der vægter
+       nedbør, vind, vindstød, temperatur, luftfugtighed, UV og dagslys – i Sverige, Norge, Danmark
+       og Finland.</p>
+    <h2>Kontakt</h2>
+    <p>Spørgsmål, idéer eller en fejl? Skriv til <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+    <h2>Ofte stillede spørgsmål</h2>
+    <p class="q">Hvordan beregnes scoren?</p>
+    <p>Hver time starter på 100, og vejrfaktorer trækker ned. En hel runde er gennemsnittet af timerne
+       fra din starttid, og en runde, der løber ind i mørket, sænkes kraftigt. Tryk på scoren for at
+       se udregningen.</p>
+    <p class="q">Hvorfor mangler der score nogle timer?</p>
+    <p>Efter solnedgang vises et månesymbol i stedet – man kan ikke spille i mørke.</p>
+    <p class="q">Kan jeg skifte vejrkilde?</p>
+    <p>Ja. Appen bruger landets egen kilde (SMHI i Sverige, DMI i Danmark, FMI i Finland, yr.no i
+       Norge) plus Apple Weather. Vælg kilde i Indstillinger, og "Sammenlign kilder" lader dig skifte
+       direkte i visningerne.</p>
+    <p class="q">Kan jeg skifte sprog?</p>
+    <p>Ja, under Indstillinger → Sprog (svensk, engelsk, norsk, dansk, finsk). Genstart appen efter
+       skiftet.</p>
+    <p class="q">Kan jeg få påmindelser?</p>
+    <p>Gem en starttid under "Dine tider", så minder appen dig om morgenen, før start og hvis vejret
+       forværres. Påmindelserne oprettes lokalt. Du kan også tilføje en widget på hjemmeskærmen.</p>
+    <p class="q">Findes der en nedbørsradar?</p>
+    <p>Ja, for Sverige og grænseområderne (knappen vises, hvor der er dækning).</p>
+    <h2>Privatliv</h2>
+    <p>Se vores <a href="privacy.html">privatlivspolitik</a>. Kort sagt: vi indsamler ingen data.</p>
+  </section>
 
-  <p class="q">Kan jag byta väderkälla?</p>
-  <p>Ja. I Inställningar väljer du primär källa (SMHI, yr.no/MET eller Apple Weather). Aktiverar du
-     "Jämför källor" kan du snabbt växla mellan dem direkt i vyerna.</p>
+  <section class="lang" data-lang="fi">
+    <h1>Spelbart – Tuki</h1>
+    <p>Spelbart arvioi kierrostesi golfsään "Spelbart-arviolla" (0–100), joka painottaa sadetta,
+       tuulta, puuskia, lämpötilaa, kosteutta, UV:tä ja päivänvaloa – Ruotsissa, Norjassa, Tanskassa
+       ja Suomessa.</p>
+    <h2>Yhteystiedot</h2>
+    <p>Kysymyksiä, ideoita tai virhe? Lähetä sähköpostia: <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+    <h2>Usein kysytyt kysymykset</h2>
+    <p class="q">Miten arvio lasketaan?</p>
+    <p>Jokainen tunti alkaa sadasta, ja säätekijät laskevat sitä. Koko kierros on lähtöajasta alkavien
+       tuntien keskiarvo, ja pimeään venyvä kierros laskee voimakkaasti. Napauta arviota nähdäksesi
+       laskelman.</p>
+    <p class="q">Miksi joiltakin tunneilta puuttuu arvio?</p>
+    <p>Auringonlaskun jälkeen näytetään kuukuvake – pimeässä ei voi pelata.</p>
+    <p class="q">Voinko vaihtaa säälähteen?</p>
+    <p>Kyllä. Sovellus käyttää maan omaa lähdettä (SMHI Ruotsissa, DMI Tanskassa, FMI Suomessa, yr.no
+       Norjassa) sekä Apple Weatheria. Valitse lähde Asetuksissa, ja "Vertaile lähteitä" antaa vaihtaa
+       suoraan näkymissä.</p>
+    <p class="q">Voinko vaihtaa kielen?</p>
+    <p>Kyllä, kohdassa Asetukset → Kieli (ruotsi, englanti, norja, tanska, suomi). Käynnistä sovellus
+       uudelleen vaihdon jälkeen.</p>
+    <p class="q">Voinko saada muistutuksia?</p>
+    <p>Tallenna lähtöaika kohtaan "Omat ajat", niin sovellus muistuttaa aamulla, ennen lähtöä ja sään
+       huonontuessa. Muistutukset luodaan paikallisesti. Voit myös lisätä widgetin aloitusnäytölle.</p>
+    <p class="q">Onko sadetutkaa?</p>
+    <p>Kyllä, Ruotsiin ja raja-alueille (painike näkyy siellä, missä on kattavuus).</p>
+    <h2>Tietosuoja</h2>
+    <p>Katso <a href="privacy.html">tietosuojaseloste</a>. Lyhyesti: emme kerää mitään tietoja.</p>
+  </section>
 
-  <p class="q">Varför behöver appen min plats?</p>
-  <p>Bara för att sortera banor efter närhet. Positionen lämnar aldrig din enhet och är helt valfri.</p>
-
-  <p class="q">Kan jag få påminnelser om mina ronder?</p>
-  <p>Ja. Spara en starttid under "Dina tider" så kan appen påminna dig på morgonen, strax före
-     start och om vädret försämras. Påminnelserna skapas lokalt på din enhet och kan stängas av
-     i Inställningar. Du kan också lägga en widget på hemskärmen med dina kommande tider och betyg.</p>
-
-  <p class="q">Finns det en nederbördsradar?</p>
-  <p>Ja, en radar från SMHI (knappen uppe till höger i en banprognos, och på Start) som visar
-     var nederbörden är just nu kring banan.</p>
-
-  <h2>Integritet</h2>
-  <p>Se vår <a href="privacy.html">integritetspolicy</a>. Kort sagt: vi samlar inte in någon
-     data och spårar dig inte.</p>
   <script>
-    (function(){var u='spelbart',d='rahbari.se',m=u+'@'+d;
-     document.querySelectorAll('a.email').forEach(function(a){a.href='mailto:'+m;a.textContent=m;});})();
+    (function(){
+      var supported=['sv','en','nb','da','fi'];
+      function pick(){var l=(navigator.language||'en').slice(0,2).toLowerCase();
+        if(l==='no')l='nb'; return supported.indexOf(l)>=0?l:'en';}
+      function show(l){
+        document.querySelectorAll('.lang').forEach(function(s){s.classList.toggle('active',s.dataset.lang===l);});
+        document.querySelectorAll('nav.langs button').forEach(function(b){b.classList.toggle('active',b.dataset.l===l);});
+        document.documentElement.lang=l;
+      }
+      document.querySelectorAll('nav.langs button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.l);});});
+      show(pick());
+      var u='spelbart',d='rahbari.se',m=u+'@'+d;
+      document.querySelectorAll('a.email').forEach(function(a){a.href='mailto:'+m;a.textContent=m;});
+    })();
   </script>
 </body>
 </html>

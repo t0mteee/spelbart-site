@@ -1,114 +1,241 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Integritetspolicy – Spelbart</title>
+<title>Privacy Policy – Spelbart</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
          max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.6;
          color: #1c1c1e; background: #fff; }
   @media (prefers-color-scheme: dark) { body { color: #e8e8ea; background: #111315; } a { color: #6fb3ff; } }
-  h1 { font-size: 1.8rem; } h2 { margin-top: 1.6em; } h3 { margin-top: 1.4em; }
-  .updated { color: #6b7280; } hr { border: none; border-top: 1px solid #8884; margin: 2.5rem 0; }
+  h1 { font-size: 1.8rem; } h2 { margin-top: 1.6em; }
+  .updated { color: #6b7280; }
   a { color: #2f9e60; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 1.5rem; }
+  nav.langs button { font: inherit; cursor: pointer; border: 1px solid #8884; background: transparent;
+    color: inherit; padding: 4px 12px; border-radius: 999px; }
+  nav.langs button.active { background: #2f9e60; color: #fff; border-color: #2f9e60; }
+  .lang { display: none; } .lang.active { display: block; }
 </style>
 </head>
 <body>
   <p><a href="index.html">← Spelbart</a></p>
+  <nav class="langs" aria-label="Language">
+    <button data-l="sv">Svenska</button><button data-l="en">English</button>
+    <button data-l="nb">Norsk</button><button data-l="da">Dansk</button><button data-l="fi">Suomi</button>
+  </nav>
 
-  <h1>Integritetspolicy för Spelbart</h1>
-  <p class="updated"><em>Senast uppdaterad: 2026-06-11</em></p>
-  <p>Spelbart är en app som bedömer golfvädret för dina ronder. Vi värnar om din integritet
-     och samlar inte in några personuppgifter.</p>
+  <section class="lang" data-lang="sv">
+    <h1>Integritetspolicy för Spelbart</h1>
+    <p class="updated"><em>Senast uppdaterad: 2026-06-13</em></p>
+    <p>Spelbart bedömer golfvädret för dina ronder. Vi samlar inte in några personuppgifter, har inga
+       användarkonton och spårar dig inte.</p>
+    <h2>Vilka uppgifter appen hanterar</h2>
+    <ul>
+      <li><strong>Plats (valfritt):</strong> Med platstillstånd används din position för att sortera
+          banor efter närhet (sker på din enhet) och för att hämta vädret <em>där du är</em> i "Just
+          nu" på startsidan. I det sistnämnda fallet skickas dina ungefärliga koordinater till
+          väderleverantören för att hämta lokalt väder – de lagras inte och kopplas inte till dig.</li>
+      <li><strong>Kalender (valfritt):</strong> Om du hämtar starttider läses kalendern <strong>endast
+          på din enhet</strong>. Inget skickas vidare.</li>
+      <li><strong>Dina val (favoriter, sparade tider, inställningar):</strong> Sparas <strong>lokalt på
+          din enhet</strong> och lämnar den aldrig.</li>
+      <li><strong>Väder- och mätdataförfrågningar:</strong> För prognoser och uppmätt väder skickar
+          appen <strong>den valda banans koordinater</strong> (eller din position för "Just nu") till
+          vädertjänsterna SMHI, MET Norway (yr.no), DMI, FMI och Apple Weather, samt till de nordiska
+          vädermyndigheternas observationstjänster. Inga uppgifter som identifierar dig skickas med.</li>
+      <li><strong>Notiser (valfritt):</strong> Påminnelser om dina ronder schemaläggs <strong>på din
+          enhet</strong>. Inget skickas till oss.</li>
+    </ul>
+    <h2>Vad vi inte gör</h2>
+    <ul>
+      <li>Vi samlar <strong>inte</strong> in, lagrar eller säljer personuppgifter.</li>
+      <li>Vi använder <strong>inga</strong> spårningstekniker, annonser eller analysverktyg.</li>
+      <li>Det finns <strong>inga</strong> användarkonton.</li>
+    </ul>
+    <h2>Tredjepartstjänster</h2>
+    <p>Väderdata från SMHI, MET Norway (yr.no), DMI, FMI och
+       <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>
+       (&#63743;&nbsp;Weather – se Apples datakällor). Ortnamn härledda från
+       <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+       (© OpenStreetMap-bidragsgivare).</p>
+    <h2>Kontakt</h2>
+    <p>Frågor om integritet? Mejla <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+  </section>
 
-  <h2>Vilka uppgifter appen hanterar</h2>
-  <ul>
-    <li><strong>Plats (valfritt):</strong> Om du ger appen platstillstånd används din position
-        <strong>endast på din enhet</strong> för att sortera golfbanor efter närhet. Positionen
-        skickas aldrig till oss eller till någon väderleverantör och lagras inte någon
-        annanstans än tillfälligt i appen.</li>
-    <li><strong>Kalender (valfritt):</strong> Om du väljer att hämta starttider från
-        kalendern läses den <strong>endast på din enhet</strong> för att hitta bokade
-        golftider. Ingenting skickas till oss eller någon annan.</li>
-    <li><strong>Dina val (favoriter, sparade starttider, inställningar):</strong> Sparas
-        <strong>lokalt på din enhet</strong>. De lämnar aldrig enheten och vi har ingen
-        åtkomst till dem.</li>
-    <li><strong>Väderförfrågningar:</strong> För att hämta prognoser skickar appen den
-        <strong>valda banans koordinater</strong> (inte din position) till väderleverantörerna
-        SMHI, MET Norway (yr.no) och Apple Weather (WeatherKit). Inga uppgifter som
-        identifierar dig skickas med.</li>
-    <li><strong>Notiser (valfritt):</strong> Om du sparar starttider kan appen visa lokala
-        påminnelser om dina ronder. De schemaläggs <strong>på din enhet</strong> och inget
-        skickas till oss.</li>
-  </ul>
+  <section class="lang" data-lang="en">
+    <h1>Privacy Policy for Spelbart</h1>
+    <p class="updated"><em>Last updated: 2026-06-13</em></p>
+    <p>Spelbart rates golf weather for your rounds. We do not collect any personal data, have no user
+       accounts and do not track you.</p>
+    <h2>What the app handles</h2>
+    <ul>
+      <li><strong>Location (optional):</strong> With location access, your position is used to sort
+          courses by distance (on your device) and to fetch the weather <em>where you are</em> in the
+          "right now" section on the home screen. In the latter case your approximate coordinates are
+          sent to the weather provider to fetch local weather – they are not stored and not linked
+          to you.</li>
+      <li><strong>Calendar (optional):</strong> If you import tee times, the calendar is read
+          <strong>only on your device</strong>. Nothing is sent on.</li>
+      <li><strong>Your choices (favorites, saved tee times, settings):</strong> Stored
+          <strong>locally on your device</strong> and never leave it.</li>
+      <li><strong>Weather and observation requests:</strong> To fetch forecasts and measured weather,
+          the app sends the <strong>selected course's coordinates</strong> (or your position for
+          "right now") to the weather services SMHI, MET Norway (yr.no), DMI, FMI and Apple Weather,
+          and to the Nordic weather institutes' observation services. No information identifying you
+          is included.</li>
+      <li><strong>Notifications (optional):</strong> Reminders about your rounds are scheduled
+          <strong>on your device</strong>. Nothing is sent to us.</li>
+    </ul>
+    <h2>What we don't do</h2>
+    <ul>
+      <li>We do <strong>not</strong> collect, store or sell personal data.</li>
+      <li>We use <strong>no</strong> tracking, ads or analytics.</li>
+      <li>There are <strong>no</strong> user accounts.</li>
+    </ul>
+    <h2>Third-party services</h2>
+    <p>Weather data from SMHI, MET Norway (yr.no), DMI, FMI and
+       <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>
+       (&#63743;&nbsp;Weather – other data sources). Place names derived from
+       <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+       (© OpenStreetMap contributors).</p>
+    <h2>Contact</h2>
+    <p>Privacy questions? Email <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+  </section>
 
-  <h2>Vad vi inte gör</h2>
-  <ul>
-    <li>Vi samlar <strong>inte</strong> in, lagrar eller säljer personuppgifter.</li>
-    <li>Vi använder <strong>inga</strong> spårningstekniker, annonser eller analysverktyg.</li>
-    <li>Det finns <strong>inga</strong> användarkonton.</li>
-  </ul>
+  <section class="lang" data-lang="nb">
+    <h1>Personvernerklæring for Spelbart</h1>
+    <p class="updated"><em>Sist oppdatert: 2026-06-13</em></p>
+    <p>Spelbart vurderer golfværet for rundene dine. Vi samler ikke inn personopplysninger, har ingen
+       brukerkontoer og sporer deg ikke.</p>
+    <h2>Hvilke opplysninger appen håndterer</h2>
+    <ul>
+      <li><strong>Posisjon (valgfritt):</strong> Med posisjonstilgang brukes posisjonen din til å
+          sortere baner etter nærhet (på enheten din) og til å hente været <em>der du er</em> i "Akkurat
+          nå" på startsiden. I sistnevnte tilfelle sendes de omtrentlige koordinatene dine til
+          værleverandøren for å hente lokalt vær – de lagres ikke og kobles ikke til deg.</li>
+      <li><strong>Kalender (valgfritt):</strong> Henter du starttider, leses kalenderen <strong>kun på
+          enheten din</strong>. Ingenting sendes videre.</li>
+      <li><strong>Dine valg (favoritter, lagrede tider, innstillinger):</strong> Lagres <strong>lokalt
+          på enheten din</strong> og forlater den aldri.</li>
+      <li><strong>Vær- og måledataforespørsler:</strong> For prognoser og målt vær sender appen
+          <strong>den valgte banens koordinater</strong> (eller posisjonen din for "Akkurat nå") til
+          værtjenestene SMHI, MET Norway (yr.no), DMI, FMI og Apple Weather, samt til de nordiske
+          værinstituttenes observasjonstjenester. Ingen opplysninger som identifiserer deg sendes med.</li>
+      <li><strong>Varsler (valgfritt):</strong> Påminnelser om rundene dine planlegges <strong>på
+          enheten din</strong>. Ingenting sendes til oss.</li>
+    </ul>
+    <h2>Hva vi ikke gjør</h2>
+    <ul>
+      <li>Vi samler <strong>ikke</strong> inn, lagrer eller selger personopplysninger.</li>
+      <li>Vi bruker <strong>ingen</strong> sporing, annonser eller analyseverktøy.</li>
+      <li>Det finnes <strong>ingen</strong> brukerkontoer.</li>
+    </ul>
+    <h2>Tredjepartstjenester</h2>
+    <p>Værdata fra SMHI, MET Norway (yr.no), DMI, FMI og
+       <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>
+       (&#63743;&nbsp;Weather – Apples datakilder). Stedsnavn er hentet fra
+       <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+       (© OpenStreetMap-bidragsytere).</p>
+    <h2>Kontakt</h2>
+    <p>Spørsmål om personvern? Send e-post til <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+  </section>
 
-  <h2>Tredjepartstjänster</h2>
-  <p>Appen hämtar väderdata från
-     <a href="https://www.smhi.se/data">SMHI Öppna data</a>,
-     <a href="https://www.met.no/en">MET Norway / yr.no</a> och
-     <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>
-     (&#63743;&nbsp;Weather – se Apples lista över datakällor).
-     Ortnamn för banorna är härledda från
-     <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
-     (© OpenStreetMap-bidragsgivare).</p>
+  <section class="lang" data-lang="da">
+    <h1>Privatlivspolitik for Spelbart</h1>
+    <p class="updated"><em>Senest opdateret: 2026-06-13</em></p>
+    <p>Spelbart vurderer golfvejret for dine runder. Vi indsamler ingen personoplysninger, har ingen
+       brugerkonti og sporer dig ikke.</p>
+    <h2>Hvilke oplysninger appen håndterer</h2>
+    <ul>
+      <li><strong>Placering (valgfrit):</strong> Med placeringsadgang bruges din placering til at
+          sortere baner efter nærhed (på din enhed) og til at hente vejret <em>hvor du er</em> i "Lige
+          nu" på startsiden. I sidstnævnte tilfælde sendes dine omtrentlige koordinater til
+          vejrudbyderen for at hente lokalt vejr – de gemmes ikke og kobles ikke til dig.</li>
+      <li><strong>Kalender (valgfrit):</strong> Henter du starttider, læses kalenderen <strong>kun på
+          din enhed</strong>. Intet sendes videre.</li>
+      <li><strong>Dine valg (favoritter, gemte tider, indstillinger):</strong> Gemmes <strong>lokalt på
+          din enhed</strong> og forlader den aldrig.</li>
+      <li><strong>Vejr- og måledataforespørgsler:</strong> Til prognoser og målt vejr sender appen
+          <strong>den valgte banes koordinater</strong> (eller din placering for "Lige nu") til
+          vejrtjenesterne SMHI, MET Norway (yr.no), DMI, FMI og Apple Weather samt til de nordiske
+          vejrinstitutters observationstjenester. Ingen oplysninger, der identificerer dig, sendes med.</li>
+      <li><strong>Notifikationer (valgfrit):</strong> Påmindelser om dine runder planlægges <strong>på
+          din enhed</strong>. Intet sendes til os.</li>
+    </ul>
+    <h2>Hvad vi ikke gør</h2>
+    <ul>
+      <li>Vi indsamler, gemmer eller sælger <strong>ikke</strong> personoplysninger.</li>
+      <li>Vi bruger <strong>ingen</strong> sporing, annoncer eller analyseværktøjer.</li>
+      <li>Der er <strong>ingen</strong> brugerkonti.</li>
+    </ul>
+    <h2>Tredjepartstjenester</h2>
+    <p>Vejrdata fra SMHI, MET Norway (yr.no), DMI, FMI og
+       <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>
+       (&#63743;&nbsp;Weather – Apples datakilder). Stednavne er afledt af
+       <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+       (© OpenStreetMap-bidragydere).</p>
+    <h2>Kontakt</h2>
+    <p>Spørgsmål om privatliv? Skriv til <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+  </section>
 
-  <h2>Kontakt</h2>
-  <p>Frågor om integritet? Mejla <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+  <section class="lang" data-lang="fi">
+    <h1>Spelbartin tietosuojaseloste</h1>
+    <p class="updated"><em>Viimeksi päivitetty: 2026-06-13</em></p>
+    <p>Spelbart arvioi kierrostesi golfsään. Emme kerää henkilötietoja, sovelluksessa ei ole
+       käyttäjätilejä emmekä seuraa sinua.</p>
+    <h2>Mitä tietoja sovellus käsittelee</h2>
+    <ul>
+      <li><strong>Sijainti (valinnainen):</strong> Sijaintiluvalla sijaintiasi käytetään kenttien
+          lajitteluun etäisyyden mukaan (laitteellasi) ja sään hakemiseen <em>sijainnissasi</em>
+          aloitusnäytön "Juuri nyt" -osiossa. Jälkimmäisessä tapauksessa likimääräiset koordinaattisi
+          lähetetään säälähteelle paikallisen sään hakemiseksi – niitä ei tallenneta eikä yhdistetä
+          sinuun.</li>
+      <li><strong>Kalenteri (valinnainen):</strong> Jos tuot lähtöaikoja, kalenteri luetaan
+          <strong>vain laitteellasi</strong>. Mitään ei lähetetä eteenpäin.</li>
+      <li><strong>Valintasi (suosikit, tallennetut ajat, asetukset):</strong> Tallennetaan
+          <strong>paikallisesti laitteellesi</strong>, eivätkä ne poistu siltä.</li>
+      <li><strong>Sää- ja havaintopyynnöt:</strong> Ennusteita ja mitattua säätä varten sovellus
+          lähettää <strong>valitun kentän koordinaatit</strong> (tai sijaintisi "Juuri nyt" -osiota
+          varten) säätietopalveluille SMHI, MET Norway (yr.no), DMI, FMI ja Apple Weather sekä
+          Pohjoismaiden sääinstituuttien havaintopalveluille. Mukana ei lähetetä sinua yksilöiviä
+          tietoja.</li>
+      <li><strong>Ilmoitukset (valinnainen):</strong> Kierroksiasi koskevat muistutukset ajoitetaan
+          <strong>laitteellasi</strong>. Mitään ei lähetetä meille.</li>
+    </ul>
+    <h2>Mitä emme tee</h2>
+    <ul>
+      <li>Emme kerää, tallenna tai myy henkilötietoja.</li>
+      <li>Emme käytä seurantaa, mainoksia tai analytiikkaa.</li>
+      <li>Käyttäjätilejä ei ole.</li>
+    </ul>
+    <h2>Kolmannen osapuolen palvelut</h2>
+    <p>Säätiedot: SMHI, MET Norway (yr.no), DMI, FMI ja
+       <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>
+       (&#63743;&nbsp;Weather – Applen tietolähteet). Paikannimet on johdettu palvelusta
+       <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+       (© OpenStreetMapin tekijät).</p>
+    <h2>Yhteystiedot</h2>
+    <p>Tietosuojakysymyksiä? Lähetä sähköpostia: <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
+  </section>
 
-  <hr>
-
-  <h1>Privacy Policy for Spelbart</h1>
-  <p class="updated"><em>Last updated: 2026-06-11</em></p>
-  <p>Spelbart rates golf weather for your rounds. We respect your privacy and do not collect
-     any personal data.</p>
-
-  <h2>What the app handles</h2>
-  <ul>
-    <li><strong>Location (optional):</strong> If you grant location access, your position is used
-        <strong>only on your device</strong> to sort golf courses by distance. It is never sent to
-        us or to any weather provider, and is not stored anywhere beyond temporary use in the app.</li>
-    <li><strong>Calendar (optional):</strong> If you choose to import tee times from your
-        calendar, it is read <strong>only on your device</strong> to find booked golf times.
-        Nothing is sent to us or anyone else.</li>
-    <li><strong>Your choices (favorites, saved tee times, settings):</strong> Stored
-        <strong>locally on your device</strong>. They never leave the device and we have no
-        access to them.</li>
-    <li><strong>Weather requests:</strong> To fetch forecasts, the app sends the
-        <strong>selected course's coordinates</strong> (not your position) to the weather providers
-        SMHI, MET Norway (yr.no) and Apple Weather (WeatherKit). No information identifying
-        you is included.</li>
-    <li><strong>Notifications (optional):</strong> If you save tee times, the app can show local
-        reminders about your rounds. They are scheduled <strong>on your device</strong> and
-        nothing is sent to us.</li>
-  </ul>
-
-  <h2>What we don't do</h2>
-  <ul>
-    <li>We do <strong>not</strong> collect, store or sell personal data.</li>
-    <li>We use <strong>no</strong> tracking, ads or analytics.</li>
-    <li>There are <strong>no</strong> user accounts.</li>
-  </ul>
-
-  <h2>Third-party services</h2>
-  <p>Weather data from SMHI, MET Norway (yr.no) and
-     <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>
-     (&#63743;&nbsp;Weather – other data sources). Place names derived from
-     OpenStreetMap (© OpenStreetMap contributors).</p>
-
-  <h2>Contact</h2>
-  <p>Privacy questions? Email <a class="email" href="#">spelbart [at] rahbari [dot] se</a>.</p>
   <script>
-    (function(){var u='spelbart',d='rahbari.se',m=u+'@'+d;
-     document.querySelectorAll('a.email').forEach(function(a){a.href='mailto:'+m;a.textContent=m;});})();
+    (function(){
+      var supported=['sv','en','nb','da','fi'];
+      function pick(){var l=(navigator.language||'en').slice(0,2).toLowerCase();
+        if(l==='no')l='nb'; return supported.indexOf(l)>=0?l:'en';}
+      function show(l){
+        document.querySelectorAll('.lang').forEach(function(s){s.classList.toggle('active',s.dataset.lang===l);});
+        document.querySelectorAll('nav.langs button').forEach(function(b){b.classList.toggle('active',b.dataset.l===l);});
+        document.documentElement.lang=l;
+      }
+      document.querySelectorAll('nav.langs button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.l);});});
+      show(pick());
+      var u='spelbart',d='rahbari.se',m=u+'@'+d;
+      document.querySelectorAll('a.email').forEach(function(a){a.href='mailto:'+m;a.textContent=m;});
+    })();
   </script>
 </body>
 </html>
